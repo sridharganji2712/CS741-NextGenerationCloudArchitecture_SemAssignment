@@ -53,28 +53,6 @@ CVXPY Solvers: OSQP, SCS
 
 The implementation does not require the GPU, but the CPU performance significantly impacts CVXPY SCA iterations.
 
-3. Repository Structure
-uav_mec_ojoa_leaf/
-│
-├── algo/
-│   ├── ojoa.py               # OJOA core controller (Stage-1 + Stage-2 + Lyapunov)
-│
-├── env/
-│   ├── sim.py                # Environment initialization
-│
-├── models/
-│   ├── channel.py            # LoS model, rate model, pathloss
-│   ├── mobility.py           # Gauss-Markov mobility
-│   ├── uav_energy.py         # Propulsion + compute energy models
-│
-├── tasks/
-│   ├── generator.py          # Random task generator
-│
-├── run_experiment.py         # Single-run simulation (OJOA only)
-├── run_comparisons.py        # Full comparison (OJOA + baselines)
-│
-└── results/                  # CSV + PNG outputs saved here
-
 4. Algorithm Components Implemented
 4.1 MU-TOG (Stage-1)
 Each user solves a best-response offloading subproblem, considering:
